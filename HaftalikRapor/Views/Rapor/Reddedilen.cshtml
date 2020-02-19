@@ -1,0 +1,85 @@
+﻿@model IEnumerable<HaftalikRapor.Models.RaporDB>
+
+@{
+    ViewBag.Title = "Reddilen Raporlar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Reddedilen Raporlar</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Rapor Kodu
+        </th>
+        <th>
+            Personel Adı
+        </th>
+        <th>
+            Personel SoyAdı
+        </th>
+        <th>
+            Rapor Teslim tarihi
+        </th>
+
+        <th>
+            Durum
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonelAd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonelSoyAd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RaporBitisTarih)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Durum)
+            </td>
+            <td>
+                @Html.ActionLink("Rapor Detayı", "Details", "Rapor", new { id = item.ID }, new { @class = "btn btn-success" })
+                @Html.ActionLink("Güncelle", "Edit", "Rapor", new { id = item.ID }, new { @class = "btn btn-success" })
+                <input type="button" value="Sil" data-id="@item.ID" class="delete-row btn btn-danger" />
+          
+            </td>
+        </tr>
+    }
+
+</table>
+<script type="text/javascript" src="~/scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            $(".delete-row").click(function () {
+                var id = $(this).attr("data-id");
+                var closestTR = $(this).closest("tr");
+                var confirmDelete = confirm( id + ' kodlu kayıdı silmek istediğinizden emin misiniz?');
+                if (confirmDelete) {
+                    $.ajax({
+                        url: '/Rapor/RedSil/' + id,
+                        type: 'POST',
+                        success: function (result) {
+                            if (result == true) {
+                                closestTR.fadeOut(1000, function () {
+                                    closestTR.remove();
+                                });
+                            }
+                            else alert("Silme işlemi sırasında hata oluştu");
+                        }
+                    });
+                }
+
+            });
+
+        });
+
+</script>

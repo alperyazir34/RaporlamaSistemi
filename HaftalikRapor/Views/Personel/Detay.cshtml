@@ -1,0 +1,96 @@
+﻿@model IEnumerable<HaftalikRapor.Models.PersonelDB>
+
+@{
+    ViewBag.Title = "Personel Detayı";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Profil Bilgileri</h2>
+
+@foreach (var item in Model)
+{
+<table class="table table-bordered">
+    <tr>
+        <th>
+           Personel Adı
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonelAd)
+        </td>
+    </tr>
+    
+    <tr>
+        <th>
+         Personel Soy Adı
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonelSoyAd)
+        </td>
+   </tr>
+    
+    <tr>
+        <th>
+          Adresi
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adres)
+        </td>
+   </tr>
+   
+     <tr>
+        <th>
+           Tel No
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelNo)
+        </td>
+  </tr>
+  
+    <tr>
+        <th>
+            EMail
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMail)
+        </td>
+   </tr>
+    
+    <tr>
+        <th>
+           Kullanıcı Adı
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.KullaniciAd)
+        </td>
+   </tr>
+    
+    <tr>
+        <th>
+            Şifre
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.KullaniciSifre)
+        </td>
+    </tr>
+    
+    <tr>
+        <th>
+            İşe Giriş Tarih
+        </th>
+        <td>
+            @Html.DisplayFor(modelItem => item.IseGirisTarih)
+        </td>
+    </tr>
+   
+
+</table>
+}
+@foreach (var item in Model)
+{
+    <table>
+        <tr>
+            @Html.ActionLink("Güncelle", "Edit", "Personel", new { id = item.ID }, new { @class = "btn btn-warning" })
+        </tr>
+    </table>
+}
+

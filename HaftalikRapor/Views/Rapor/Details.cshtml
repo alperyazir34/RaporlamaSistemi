@@ -1,0 +1,98 @@
+﻿@model IEnumerable<HaftalikRapor.Models.RaporDB>
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Rapor Detayı</h2>
+@Html.AntiForgeryToken()
+
+
+@foreach (var item in Model)
+{
+    <div>
+
+        <hr />
+        @Html.HiddenFor(model => item.ID)
+        <table class="table table-hover table-bordered">
+            <tr>
+                <th>
+                    Rapor Başlangıç Tarihi
+                </th>
+                <td>
+                    @Html.DisplayFor(model => item.RaporBaslangicTarih)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Rapor Bitiş Tarihi
+                </th>
+                <td>
+                    @Html.DisplayFor(model => item.RaporBitisTarih)
+                </td>
+
+            </tr>
+            <tr>
+                <th>
+                    Çalışılan Projeler
+                </th>
+                <td>
+                    @Html.DisplayFor(model => item.YapilanProje)
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <br />
+
+    <div>
+        <table class="table table-bordered">
+            <tr>
+                <th>
+                    Yapılanlar
+                </th>
+                <td>
+                    @Html.DisplayFor(model => item.Yapilanlar)
+                </td>
+           </tr>
+           
+          
+            <tr>
+                  <th>
+                      Karşılaşılan Sorunlar
+                  </th>
+                  <td>
+                      @Html.DisplayFor(model => item.Sorunlar)
+                  </td>
+            </tr>
+            
+            
+            <tr>
+                 <th>
+                     Kullanılan Malzeme
+                 </th>
+                 <td>
+                     @Html.DisplayFor(model => item.KullanilanMalzeme)
+                 </td>
+             </tr>
+           
+           
+            <tr>
+                 <th>
+                     Öneriler
+                 </th>
+                 <td>
+                     @Html.DisplayFor(model => item.Oneriler)
+                 </td>
+            </tr>
+           
+         
+   
+        </table>
+    </div>
+    <p>
+       
+        @Html.ActionLink("Listeye Geri Dön", "Index","Rapor",new { @class = "btn btn-success" })
+    </p>
+
+}

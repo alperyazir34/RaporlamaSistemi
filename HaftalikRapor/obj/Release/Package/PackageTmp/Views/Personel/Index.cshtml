@@ -1,0 +1,44 @@
+﻿@model IEnumerable<HaftalikRapor.Models.PersonelDB>
+
+   @{
+       ViewBag.Title = "Personel Listesi";
+   }
+
+
+ <br />
+   
+  <table class="table table-hover table-bordered">
+    <tr>
+
+        <th>
+            Personel Adı
+        </th>
+        <th>
+            Personel Soy Adı
+        </th>
+        
+        <th>
+            E-Mail
+        </th>
+      
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonelAd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonelSoyAd)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.EMail)
+            </td>
+         </tr> 
+
+    }
+    </table>
+            

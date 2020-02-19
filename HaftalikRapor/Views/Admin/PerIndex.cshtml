@@ -1,0 +1,124 @@
+﻿@model HaftalikRapor.Models.PersonelDB
+
+@{
+    ViewBag.Title = "Personel Listesi";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+<head>
+    <link rel="icon" type="image/png" href="~/LogoTech.png" />
+</head>
+<body>
+    <br />
+    <form action="/Admin/Filtre" method="post" enctype="multipart/form-data">
+        @Html.AntiForgeryToken()
+      
+        <table style="float:right;">
+            <tr>
+
+                <td>
+                  
+                    @Html.EditorFor(model => model.PersonelAd,new { @type = "text", @class = "form-control" })
+                </td>
+                <td>
+                    <input type="submit" value="İsime göre Filtrele" class="btn btn-danger" />
+                </td>
+            </tr>
+        </table>
+    </form>
+
+        <table>
+            <tr>
+                <td>
+                    @Html.ActionLink("Yeni Personel Ekle", "PerCreate", "Admin", new { @class = "btn btn-danger" })
+
+                </td>
+            </tr>
+        </table>
+        <br />
+
+        <table class="table table-hover table-bordered">
+            <tr>
+                <th>
+                    Personel Kodu
+                </th>
+                <th>
+                    Personel Adı
+                </th>
+                <th>
+                    Personel Soy Adı
+                </th>
+
+                <th>
+                    E-Mail
+                </th>
+                <th>İşlemler</th>
+            </tr>
+
+            @foreach (var item in ViewBag.Dev)
+            {
+                <tr>
+                    <td>
+                        @item.ID
+                    </td>
+                    <td>
+                        @item.PersonelAd
+                    </td>
+                    <td>
+                        @item.PersonelSoyAd
+                    </td>
+
+                    <td>
+                        @item.EMail
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("Güncelle", "PerEdit", new { id = item.ID }, new { @class = "btn btn-dark" })
+                        @Html.ActionLink("Detay", "PerDetails", new { id = item.ID }, new { @class = "btn btn-dark" })
+                        <input type="button" value="Sil" data-id="@item.ID" class="delete-row btn btn-dark" />
+                    </td>
+                </tr>
+
+            }
+        </table>
+
+
+        <script type="text/javascript" src="~/scripts/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $(".delete-row").click(function () {
+                    var id = $(this).attr("data-id");
+                    var closestTR = $(this).closest("tr");
+                    var confirmDelete = confirm(id + ' kodlu kayıdı silmek istediğinizden emin misiniz?');
+                    if (confirmDelete) {
+                        $.ajax({
+                            url: '/Admin/PerSil/' + id,
+                            type: 'POST',
+                            success: function (result) {
+                                if (result == true) {
+                                    closestTR.fadeOut(1000, function () {
+                                        closestTR.remove();
+                                    });
+                                }
+                                else alert("Silme işlemi sırasında hata oluştu");
+                            }
+                        });
+                    }
+
+                });
+
+            });
+        </script>
+        @*<script type="text/javascript">
+                var options = {
+                    type: "basic",
+                    title: "",
+                    mesaage: "Hoşgeldiniz"
+                };
+                chrome.notifications.create(options);
+                chrome.notifications.onCliked.addListener(redirectWindow);
+                function redirectWindow() {
+                    alert("Sitemize Hoş Geldiniz");
+                }
+            </script>*@
+   
+</body>

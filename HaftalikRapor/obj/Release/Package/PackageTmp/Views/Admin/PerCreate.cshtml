@@ -1,0 +1,120 @@
+﻿@model HaftalikRapor.Models.PersonelDB
+
+@{
+    ViewBag.Title = "Personel Ekle";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+
+
+<h2>Personel Ekle/Güncelle</h2>
+
+@using (Html.BeginForm("PerCreate", "Admin", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.HiddenFor(model => model.ID)
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Personel Adı</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PersonelAd, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PersonelAd, "", new { @class = "text-danger" })
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Personel Soy Adı</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PersonelSoyAd, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PersonelSoyAd, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Telefon</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TelNo, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TelNo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Adres</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Adres, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Adres, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">E-Mail</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EMail, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EMail, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+       
+            <div class="form-group">
+                <label class="control-label col-md-2">İşe Giriş Tarihi</label>
+                <div class="col-md-10">
+                    
+                   @Html.TextBoxFor(model => model.IseGirisTarih, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+                    @Html.ValidationMessageFor(model => model.IseGirisTarih, "", new { @class = "text-danger" })
+                    @*Tarih formatının yüklü gelmesi için yıl ay gün şeklinde belirttik TextboxFor olarak alınması gerekir*@
+                </div>
+            </div>
+      
+            <div class="form-group">
+                <label class="control-label col-md-2">İşten Çıkış Tarihi</label>
+                <div class="col-md-10">
+
+                    @Html.TextBoxFor(model => model.IstenCikisTarih, "{0:yyyy-MM-dd}", new { @class = "form-control" , type = "date"})
+                    @Html.ValidationMessageFor(model => model.IstenCikisTarih, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        
+
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Kullanıcı Adı</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.KullaniciAd, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.KullaniciAd, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">Kullanıcı Şifre</label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.KullaniciSifre, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.KullaniciSifre, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2">Yetkisi</label>
+            <div class="col-md-10">
+                @Html.DropDownListFor(model => model.RolID, new SelectList(ViewBag.RolAdi, "ID", "Yetkisi"), "Seçilmedi", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.RolID, "", new { @class = "text-danger" })
+
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Kaydet" class="btn btn-danger" /> |
+                @Html.ActionLink("Lİsteye Geri Dön", "PerIndex", "Admin", new { @class = "btn btn-danger" })
+            </div>
+        </div>
+    </div>
+}
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

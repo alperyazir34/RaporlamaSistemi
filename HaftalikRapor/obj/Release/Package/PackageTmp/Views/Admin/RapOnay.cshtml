@@ -1,0 +1,83 @@
+﻿@model IEnumerable<HaftalikRapor.Models.RaporDB>
+
+@{
+    ViewBag.Title = "Rapor Onay";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Onay Bekleyen Raporlar</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            Rapor Kodu
+        </th>
+        <th>
+            Personel Adı
+        </th>
+        <th>
+            Personel SoyAdı
+        </th>
+        <th>
+            Rapor Teslim tarihi
+        </th>
+
+        <th>
+            Durum
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonelAd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersonelSoyAd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RaporBitisTarih)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Durum)
+            </td>
+            <td>
+                @Html.ActionLink("Rapor Detayı", "RapDetails", "Admin", new { id = item.ID }, new { @class = "btn btn-success" })
+                @Html.ActionLink("Onayla", "AdminOnay", "Admin", new { id = item.ID }, new { @class = "btn btn-success" })
+                <input type="submit" value="Reddet" class="delete-row btn btn-danger" onclick="mailgonderfunc(this.id)" data-id="@item.ID" id="@item.ID" />
+            </td>
+        </tr>
+     
+    }
+
+</table>
+<script type="text/javascript" src="~/scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+   
+       function mailgonderfunc(id) {
+           var iddata = id;
+            //--------- JSON Verisini Bu Arada Oluşturdum--------------------
+            var RaporDB = {
+                RedSebep: prompt("Lütfen reddetme sebebini yazınız", "sebep"),
+                ID: iddata
+            }
+            //--------- JSON Verisini Bu Arada Oluşturdum--------------------
+
+            $.ajax({
+                url: '@Url.Action("RaporRedMail", "Admin")',
+                type: 'POST',
+                dataType: 'json',
+                data: RaporDB,
+                success: function (data) {
+                    alert(data);
+                    window.location.reload();
+                }
+            });
+           
+        }  
+</script>

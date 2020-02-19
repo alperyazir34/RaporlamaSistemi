@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaftalikRapor", "HaftalikRapor\HaftalikRapor.csproj", "{15D39548-C0D1-4C3A-9848-FDD8E34D78CD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dal", "Dal\Dal.csproj", "{6B7802C6-525D-42F5-BDA5-E7AF0BFF1878}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15D39548-C0D1-4C3A-9848-FDD8E34D78CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15D39548-C0D1-4C3A-9848-FDD8E34D78CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15D39548-C0D1-4C3A-9848-FDD8E34D78CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15D39548-C0D1-4C3A-9848-FDD8E34D78CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B7802C6-525D-42F5-BDA5-E7AF0BFF1878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B7802C6-525D-42F5-BDA5-E7AF0BFF1878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B7802C6-525D-42F5-BDA5-E7AF0BFF1878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B7802C6-525D-42F5-BDA5-E7AF0BFF1878}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

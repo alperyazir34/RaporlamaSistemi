@@ -1,0 +1,118 @@
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\ApplicationInsights.config
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\csc.exe
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\System.Collections.Immutable.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\vbc.exe
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\VBCSCompiler.exe
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\VBCSCompiler.exe.config
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\HaftalikRapor.dll.config
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\HaftalikRapor.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\HaftalikRapor.pdb
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Dal.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.AI.Web.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.AI.WindowsServer.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.ApplicationInsights.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.Web.Infrastructure.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\System.Web.Helpers.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\System.Web.Mvc.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\System.Web.Razor.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\System.Web.Webpages.Deployment.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\System.Web.Webpages.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\System.Web.Webpages.Razor.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Dal.pdb
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.AI.Web.xml
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.AI.WindowsServer.xml
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.ApplicationInsights.xml
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\System.Web.Razor.xml
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\System.Web.Webpages.xml
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\System.Web.Webpages.Deployment.xml
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\System.Web.Webpages.Razor.xml
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\System.Web.Helpers.xml
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\System.Web.Mvc.xml
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\obj\Debug\HaftalikRapor.csprojResolveAssemblyReference.cache
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\obj\Debug\HaftalikRapor.dll
+c:\users\acer\documents\visual studio 2015\Projects\HaftalikRapor\HaftalikRapor\obj\Debug\HaftalikRapor.pdb
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\ApplicationInsights.config
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\csc.exe
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\vbc.exe
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\VBCSCompiler.exe
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\HaftalikRapor.dll.config
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\HaftalikRapor.dll
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\HaftalikRapor.pdb
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Dal.dll
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Dal.pdb
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\obj\Debug\HaftalikRapor.csprojResolveAssemblyReference.cache
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\obj\Debug\HaftalikRapor.dll
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\obj\Debug\HaftalikRapor.pdb
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\roslyn\csc.exe
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\roslyn\vbc.exe
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\roslyn\VBCSCompiler.exe
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\ApplicationInsights.config
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\HaftalikRapor.dll.config
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\HaftalikRapor.dll
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\HaftalikRapor.pdb
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\Dal.dll
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\Dal.pdb
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\Microsoft.AI.Web.xml
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\Microsoft.ApplicationInsights.xml
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\PagedList.xml
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\PagedList.Mvc.xml
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\System.Web.Razor.xml
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\System.Web.Webpages.xml
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\System.Web.Webpages.Deployment.xml
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\System.Web.Webpages.Razor.xml
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\System.Web.Helpers.xml
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\bin\System.Web.Mvc.xml
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\obj\Debug\HaftalikRapor.csprojResolveAssemblyReference.cache
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\obj\Debug\HaftalikRapor.dll
+C:\Users\alper.yazir\Desktop\HaftalikRaporYedek\HaftalikRapor\obj\Debug\HaftalikRapor.pdb
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.AI.Web.xml
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.ApplicationInsights.xml
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\PagedList.xml
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\PagedList.Mvc.xml
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\System.Web.Razor.xml
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\System.Web.Webpages.xml
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\System.Web.Webpages.Deployment.xml
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\System.Web.Webpages.Razor.xml
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\System.Web.Helpers.xml
+C:\Users\alper.yazir\Documents\Visual Studio 2015\Projects\HaftalikRapor\HaftalikRapor\bin\System.Web.Mvc.xml

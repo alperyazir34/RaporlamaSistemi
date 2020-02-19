@@ -1,0 +1,112 @@
+﻿@model IEnumerable<HaftalikRapor.Models.PersonelDB>
+
+@{
+    ViewBag.Title = "Personel Detayı";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>Personel Detayı</h2>
+@Html.AntiForgeryToken()
+
+
+@foreach (var item in Model)
+{
+    <div>
+
+        <hr />
+        @Html.HiddenFor(model => item.ID)
+        <table class="table table-hover table-bordered">
+            <tr>
+                <th>
+                   Personel Adı
+                </th>
+                <td>
+                    @Html.DisplayFor(model => item.PersonelAd)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                   Personel Soy Adı
+                </th>
+                <td>
+                    @Html.DisplayFor(model => item.PersonelSoyAd)
+                </td>
+
+            </tr>
+            <tr>
+                <th>
+                  Tel No
+                </th>
+                <td>
+                    @Html.DisplayFor(model => item.TelNo)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                   Adres
+                </th>
+                <td>
+                    @Html.DisplayFor(model => item.Adres)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    E-Mail
+                </th>
+                <td>
+                    @Html.DisplayFor(model => item.EMail)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    İşe Giriş Tarihi
+                </th>
+                <td>
+                    @Html.DisplayFor(model => item.IseGirisTarih)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    İşten Çıkış Tarihi
+                </th>
+                <td>
+                    @Html.DisplayFor(model => item.IstenCikisTarih)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                   Kullanıcı Adı
+                </th>
+                <td>
+                    @Html.DisplayFor(model => item.KullaniciAd)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                   Kullanıcı Şifre
+                </th>
+                <td>
+                    @Html.DisplayFor(model => item.KullaniciSifre)
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Yetkisi
+                </th>
+                <td>
+                   @Html.DisplayFor(model => item.Yetkisi)
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <br />
+
+    
+   
+    <p>
+
+        @Html.ActionLink("Listeye Geri Dön", "PerIndex", "Admin", new { @class = "btn btn-danger" })
+    </p>
+
+}

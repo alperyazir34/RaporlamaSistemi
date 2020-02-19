@@ -1,0 +1,154 @@
+﻿@model HaftalikRapor.Models.RaporDB
+
+@{
+    ViewBag.Title = "Rapor Ekle";
+}
+
+<h2>Rapor Ekle/Güncelle</h2>
+
+
+@using (Html.BeginForm("Create", "Rapor", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.HiddenFor(model => model.ID)
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <table class="table table-hover table-bordered">
+            <tr>
+
+                <th>
+                    <label>
+                        Rapor Başlangıç tarihi
+                    </label>
+                </th>
+
+                <td>
+                    <div class="form-group">
+
+                        <div class="col-md-10">
+                            <input type="date" @Html.EditorFor(model => model.RaporBaslangicTarih, new { htmlAttributes = new { @class = "form-control" } })
+                                   @Html.ValidationMessageFor(model => model.RaporBaslangicTarih, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label>
+                        Rapor Bitiş tarihi
+                    </label>
+                </th>
+                <td>
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <input type="date" @Html.EditorFor(model => model.RaporBitisTarih, new { htmlAttributes = new { @class = "form-control" } })
+                                   @Html.ValidationMessageFor(model => model.RaporBitisTarih, "", new { @class = "text-danger" })
+
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <th>
+                    <label>
+                        Yapılan Proje
+                    </label>
+                </th>
+                <td>
+                    <div class="form-group">
+
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.YapilanProje, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.YapilanProje, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+
+        </table>
+        <br /><br />
+
+
+        <table class="table table-bordered">
+            <tr>
+                <label>
+                    Yapılanlar
+                </label>
+            </tr>
+            <tr>
+                <div class="form-group">
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(model => model.Yapilanlar, new { htmlAttributes = new { @class = "form-control", @style = "width: 600px;height:300px;" } })
+                        @Html.ValidationMessageFor(model => model.Yapilanlar, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </tr>
+            <tr>
+                <label>
+                    Karşılaşılan Sorunlar
+                </label>
+            </tr>
+            <tr>
+                <div class="form-group">
+
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(model => model.Sorunlar, new { htmlAttributes = new {@class = "form-control", required = "" } })
+                        @Html.ValidationMessageFor(model => model.Sorunlar, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </tr>
+            <tr>
+                <label>
+                    Kullanılan Malzemeler
+                </label>
+            </tr>
+            <tr>
+                <div class="form-group">
+                 
+                        <div class="col-md-10">
+                            @Html.TextAreaFor(model => model.KullanilanMalzeme, new { htmlAttributes = new { @class = "form-control", @style = "width: 600px;height:300px;" } })
+                            @Html.ValidationMessageFor(model => model.KullanilanMalzeme, "", new { @class = "text-danger" })
+                        </div>
+                </div>
+            </tr>
+            <tr>
+                    
+                        Öneriler
+                    
+            </tr>
+            <tr>
+                <div class="form-group">
+                        <div class="col-md-10">
+                            @Html.TextAreaFor(model => model.Oneriler, new { htmlAttributes = new { @class = "form-control", @style= "width: 600px;height:300px;" } })
+                            @Html.ValidationMessageFor(model => model.Oneriler, "", new { @class = "text-danger" })
+                        </div>
+                </div>
+            </tr>
+
+        </table>
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Kaydet" class="btn btn-success" /> |
+                @Html.ActionLink("Listeye Geri Dön", "Index", "Rapor", new { @class = "btn btn-success" })
+            </div>
+        </div>
+    </div>
+}
+
+
+
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

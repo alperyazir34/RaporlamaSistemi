@@ -1,0 +1,100 @@
+﻿@model IEnumerable<HaftalikRapor.Models.RaporDB>
+
+@{
+    ViewBag.Title = "Rapor Listesi";
+}
+<body>
+    <h2>Rapor Listesi</h2>
+
+    <table>
+        <tr>
+            <td>
+                @Html.ActionLink("Yeni Rapor Ekle", "Create", "Rapor", new { @class = "btn btn-success" })
+               
+            </td>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td>
+                @Html.ActionLink("Onay Bekleyen Raporlar", "OnayBekleyen", "Rapor", new { @class = "btn btn-warning" })
+                <i class="fas fa-exclamation-triangle" style="float:right;color:orange; font-size:17px; margin-right:20px;"><br />&nbsp;@ViewBag.Adet</i>
+            </td>
+            <td>
+                @Html.ActionLink("Reddedilen Raporlar", "Reddedilen", "Rapor", new { @class = "btn btn-danger" })
+                <i class="fas fa-exclamation-triangle" style="float:right;color:red; font-size:17px; "><br />&nbsp;@ViewBag.Adet2</i>
+            </td>
+        </tr>
+    </table>
+       <br />
+   
+    <table class="table table-hover table-bordered">
+        <tr>
+            <th>
+                Rapor Kodu
+            </th>
+
+            <th>
+                Personel Ad
+            </th>
+            <th>
+                Personel Soy Adı
+            </th>
+            <th>
+                Rapor Teslim tarihi
+            </th>
+            <th>İşlemler</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.PersonelAd)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PersonelSoyAd)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RaporBitisTarih)
+                </td>
+               
+                <td>
+                    @Html.ActionLink("Rapor Detayı", "Details", new { id = item.ID }, new { @class = "btn btn-success" })
+                    @*@Html.ActionLink("Güncelle", "Edit", new { id = item.ID }, new { @class = "btn btn-warning" })
+                    <input type="button" value="Sil" data-id="@item.ID" class="delete-row btn btn-danger" />*@
+                </td>
+            </tr>
+        }
+
+    </table>
+    <script type="text/javascript" src="~/scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".delete-row").click(function () {
+                var id = $(this).attr("data-id");
+                var closestTR = $(this).closest("tr");
+                var confirmDelete = confirm( id + ' kodlu kayıdı silmek istediğinizden emin misiniz?');
+                if (confirmDelete) {
+                    $.ajax({
+                        url: '/Rapor/RapSil/' + id,
+                        type: 'POST',
+                        success: function (result) {
+                            if (result == true) {
+                                closestTR.fadeOut(1000, function () {
+                                    closestTR.remove();
+                                });
+                            }
+                            else alert("Silme işlemi sırasında hata oluştu");
+                        }
+                    });
+                }
+
+            });
+
+        });
+    </script>
+</body>

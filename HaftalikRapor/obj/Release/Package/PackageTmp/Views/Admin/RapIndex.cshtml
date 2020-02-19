@@ -1,0 +1,123 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model IPagedList<HaftalikRapor.Models.RaporDB>
+
+@{
+    ViewBag.Title = "Rapor Listesi";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+
+}
+
+<h2>Rapor Listesi</h2>
+<div id="dvMusteriListesi">
+    
+    @foreach (var item in Model)
+    {
+        int sayac = 0;
+        if (sayac == 0)
+        {
+            @Html.Partial("_FiltrelePartial", item)
+            break;
+        }
+
+    }
+    <table>
+        <tr>
+            <td>
+                @Html.ActionLink("Yeni Rapor Ekle", "RapCreate", "Admin", new { @class = "btn btn-danger" })
+
+            </td>
+            <td>
+                &nbsp; &nbsp; &nbsp; &nbsp;
+            </td>
+            <td>
+                @Html.ActionLink("Onay Bekleyen raporlar", "RapOnay", "Admin", new { @class = "btn btn-danger" })
+                <i class="fas fa-exclamation-triangle" style="float:right;color:orange; font-size:17px; "><br />&nbsp;@ViewBag.Adet</i>
+
+            </td>
+
+        </tr>
+    </table>
+
+    <br />
+    <table class="table table-hover table-bordered">
+        <tr>
+            <th>
+                Rapor Kodu
+            </th>
+            
+            <th>
+                Personel Ad
+            </th>
+            <th>
+                Personel Soy Adı
+            </th>
+            <th>
+                Rapor Teslim tarihi
+            </th>
+            <th>
+                İşlemler
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(ModelItem => item.ID)
+                </td>
+                
+                <td>
+                    @Html.DisplayFor(ModelItem => item.PersonelAd)
+                </td>
+                <td>
+                    @Html.DisplayFor(ModelItem => item.PersonelSoyAd)
+                </td>
+                <td>
+                    @Html.DisplayFor(ModelItem => item.RaporBitisTarih)
+                    @*@String.Format("{0:dd.MM.yyyy}",item.RaporBitisTarih)*@
+                    @*ViewBag ile modeldeki Display Format kullanılmadığı için String Format ile nasıl görüneceğini ayarladık*@
+                </td>
+
+                <td>
+                    @Html.ActionLink("Rapor Detayı", "RapDetails", new { id = item.ID }, new { @class = "btn btn-dark" })
+                    @Html.ActionLink("Güncelle", "RapEdit", new { id = item.ID }, new { @class = "btn btn-dark" })
+                   
+                    
+                     <input type="button" value="Sil" data-id="@item.ID" class="delete-row btn btn-dark" />
+                   
+                </td>
+            </tr>
+        }
+
+    </table>
+
+
+    @Html.PagedListPager(Model, page => Url.Action("RapIndex", new { page }))
+</div>
+<script type="text/javascript" src="~/scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".delete-row").click(function () {
+            var id = $(this).attr("data-id");
+            var closestTR = $(this).closest("tr");
+            var confirmDelete = confirm(id + ' kodlu kayıdı silmek istediğinizden emin misiniz?');
+            if (confirmDelete) {
+                $.ajax({
+                    url: '/Admin/RapSil/' + id,
+                    type: 'POST',
+                    success: function (result) {
+                        if (result == true) {
+                            closestTR.fadeOut(1000, function () {
+                                closestTR.remove();
+                            });
+                        }
+                        else alert("Silme işlemi sırasında hata oluştu");
+                    }
+                });
+            }
+
+        });
+
+    });
+</script>
